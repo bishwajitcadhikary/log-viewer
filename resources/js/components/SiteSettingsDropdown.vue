@@ -37,14 +37,6 @@
             </button>
           </MenuItem>
 
-          <MenuItem @click.stop.prevent="copyUrlToClipboard" v-slot="{ active }">
-            <button :class="[active ? 'active' : '']">
-              <ShareIcon class="w-4 h-4" />
-              <span v-show="!copied">Share this page</span>
-              <span v-show="copied" class="text-brand-500">Link copied!</span>
-            </button>
-          </MenuItem>
-
           <div class="divider"></div>
 
           <MenuItem @click.stop.prevent="logViewerStore.toggleTheme()" v-slot="{ active }">
@@ -61,32 +53,6 @@
               <QuestionMarkCircleIcon class="w-4 h-4" />
               Keyboard Shortcuts
             </button>
-          </MenuItem>
-
-          <MenuItem v-slot="{ active }">
-            <a href="https://log-viewer.opcodes.io/docs" target="_blank" :class="[active ? 'active' : '']">
-              <QuestionMarkCircleIcon class="w-4 h-4" />
-              Documentation
-            </a>
-          </MenuItem>
-
-          <MenuItem v-slot="{ active }">
-            <a href="https://www.github.com/opcodesio/log-viewer" target="_blank" :class="[active ? 'active' : '']">
-              <QuestionMarkCircleIcon class="w-4 h-4" />
-              Help
-            </a>
-          </MenuItem>
-
-          <div class="divider"></div>
-
-          <MenuItem v-slot="{ active }">
-            <a href="https://www.buymeacoffee.com/arunas" target="_blank" :class="[active ? 'active' : '']">
-              <div class="w-4 h-4 mr-3 flex flex-col items-center">
-                <bmc-icon class="h-4 w-auto" />
-              </div>
-              <strong :class="[active ? 'text-white' : 'text-brand-500']">Show your support</strong>
-              <ArrowTopRightOnSquareIcon class="ml-2 w-4 h-4 opacity-75" />
-            </a>
           </MenuItem>
         </div>
       </MenuItems>

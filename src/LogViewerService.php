@@ -315,7 +315,7 @@ class LogViewerService
         }
 
         if (class_exists(InstalledVersions::class)) {
-            return InstalledVersions::getPrettyVersion('opcodesio/log-viewer') ?? 'dev-main';
+            return InstalledVersions::getPrettyVersion('bishwajitcadhikary/log-viewer') ?? 'dev-main';
         } else {
             $composerJson = json_decode(file_get_contents(__DIR__.'/../composer.json'), true);
 
